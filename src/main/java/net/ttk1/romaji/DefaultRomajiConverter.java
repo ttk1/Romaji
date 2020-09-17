@@ -87,14 +87,14 @@ public class DefaultRomajiConverter implements RomajiConverter {
             Trie<Character, String> child = current.getChild(key);
             if (child != null) {
                 current = child;
-                j++;
+                ++j;
             } else {
                 String value = current.getValue();
                 if (value != null) {
                     hiragana.append(value);
                     i = j;
                 } else {
-                    if (i != j && romaji.charAt(i) == romaji.charAt(i + 1)) {
+                    if (i + 1 < romaji.length() && romaji.charAt(i) == romaji.charAt(i + 1)) {
                         hiragana.append('っ');
                     } else {
                         hiragana.append(romaji.charAt(i));
