@@ -81,17 +81,35 @@ public class DefaultRomajiConverter implements RomajiConverter {
     public String toHiragana(String romaji) {
         StringBuilder hiragana = new StringBuilder();
         Trie<Character, String> current = dict;
-        for (int i = 0; i < romaji.length(); i++) {
-            Character key = romaji.charAt(i);
+        int i = 0, j = 0;
+        while (j < romaji.length()) {
+            Character key = romaji.charAt(j);
             Trie<Character, String> child = current.getChild(key);
-            if (child == null) {
-                hiragana.append(current.getValue());
-                current = dict.getChild(key);
+            if (child != null) {
+                current = child;
+                j++;
             } else {
-                current = current.getChild(key);
+                String value = current.getValue();
+                if (value != null) {
+                    hiragana.append(value);
+                    i = j;
+                } else {
+                    if (i != j && romaji.charAt(i) == romaji.charAt(i + 1)) {
+                        hiragana.append('っ');
+                    } else {
+                        hiragana.append(romaji.charAt(i));
+                    }
+                    j = ++i;
+                }
+                current = dict;
             }
         }
-        hiragana.append(current.getValue());
+        String value = current.getValue();
+        if (value != null) {
+            hiragana.append(value);
+        } else {
+            hiragana.append(romaji.substring(i));
+        }
         return hiragana.toString();
     }
 }
