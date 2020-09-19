@@ -99,6 +99,13 @@ public class DefaultRomajiConverter implements RomajiConverter {
         addRule("be", "べ");
         addRule("bo", "ぼ");
 
+        // カタカナ混じってるけどルールに含めておく
+        addRule("va", "ヴぁ");
+        addRule("vi", "ヴぃ");
+        addRule("vu", "ヴ");
+        addRule("ve", "ヴぇ");
+        addRule("vo", "ヴぉ");
+
         addRule("pa", "ぱ");
         addRule("pi", "ぴ");
         addRule("pu", "ぷ");
@@ -114,11 +121,13 @@ public class DefaultRomajiConverter implements RomajiConverter {
         addRule("lya", "ゃ");
         addRule("lyu", "ゅ");
         addRule("lyo", "ょ");
+        addRule("lwa", "ゎ");
         addRule("ltu", "っ");
 
         addRule("xya", "ゃ");
         addRule("xyu", "ゅ");
         addRule("xyo", "ょ");
+        addRule("xwa", "ゎ");
         addRule("xtu", "っ");
     }
 
