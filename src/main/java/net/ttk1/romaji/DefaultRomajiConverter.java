@@ -7,6 +7,12 @@ public class DefaultRomajiConverter implements RomajiConverter {
 
     public DefaultRomajiConverter() {
         dict = new Trie<>(null);
+        addRule("-", "ー");
+        addRule(",", "、");
+        addRule(".", "。");
+        addRule(" ", "　");
+        addRule("!", "！");
+        addRule("?", "？");
 
         addRule("a", "あ");
         addRule("i", "い");
@@ -98,6 +104,22 @@ public class DefaultRomajiConverter implements RomajiConverter {
         addRule("pu", "ぷ");
         addRule("pe", "ぺ");
         addRule("po", "ぽ");
+
+        addRule("la", "ぁ");
+        addRule("li", "ぃ");
+        addRule("lu", "ぅ");
+        addRule("le", "ぇ");
+        addRule("lo", "ぉ");
+
+        addRule("lya", "ゃ");
+        addRule("lyu", "ゅ");
+        addRule("lyo", "ょ");
+        addRule("ltu", "っ");
+
+        addRule("xya", "ゃ");
+        addRule("xyu", "ゅ");
+        addRule("xyo", "ょ");
+        addRule("xtu", "っ");
     }
 
     private void addRule(String spell, String hiragana) {

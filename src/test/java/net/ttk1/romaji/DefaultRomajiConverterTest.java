@@ -37,7 +37,7 @@ public class DefaultRomajiConverterTest {
     public void testPartialConversion() {
         RomajiConverter converter = new DefaultRomajiConverter();
         String romaji = "hello, world!";
-        String expected = "へっlお, をrld!";
+        String expected = "へっぉ、　をrld！";
         String actual = converter.toHiragana(romaji);
         assertThat(actual, is(expected));
     }
