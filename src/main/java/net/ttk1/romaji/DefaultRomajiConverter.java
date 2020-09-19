@@ -95,7 +95,11 @@ public class DefaultRomajiConverter implements RomajiConverter {
                     i = j;
                 } else {
                     if (i + 1 < romaji.length() && romaji.charAt(i) == romaji.charAt(i + 1)) {
+                        // 促音
                         hiragana.append('っ');
+                    } else if (romaji.charAt(i) == 'n') {
+                        // 撥音
+                        hiragana.append('ん');
                     } else {
                         hiragana.append(romaji.charAt(i));
                     }

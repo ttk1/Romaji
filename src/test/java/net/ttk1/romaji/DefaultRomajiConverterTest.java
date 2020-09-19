@@ -25,6 +25,15 @@ public class DefaultRomajiConverterTest {
     }
 
     @Test
+    public void testHatsuonConversion() {
+        RomajiConverter converter = new DefaultRomajiConverter();
+        String romaji = "konbanha";
+        String expected = "こんばんは";
+        String actual = converter.toHiragana(romaji);
+        assertThat(actual, is(expected));
+    }
+
+    @Test
     public void testPartialConversion() {
         RomajiConverter converter = new DefaultRomajiConverter();
         String romaji = "hello, world!";
