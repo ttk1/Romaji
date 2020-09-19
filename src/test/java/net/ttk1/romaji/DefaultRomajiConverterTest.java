@@ -18,7 +18,7 @@ public class DefaultRomajiConverterTest {
     @Test
     public void testSokuonConversion() {
         RomajiConverter converter = new DefaultRomajiConverter();
-        String romaji = "attikotti";
+        String romaji = "acchikocchi";
         String expected = "あっちこっち";
         String actual = converter.toHiragana(romaji);
         assertThat(actual, is(expected));

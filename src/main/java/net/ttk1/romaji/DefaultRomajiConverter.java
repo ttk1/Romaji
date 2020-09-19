@@ -22,13 +22,16 @@ public class DefaultRomajiConverter implements RomajiConverter {
 
         addRule("sa", "さ");
         addRule("si", "し");
+        addRule("shi", "し");
         addRule("su", "す");
         addRule("se", "せ");
         addRule("so", "そ");
 
         addRule("ta", "た");
         addRule("ti", "ち");
+        addRule("chi", "ち");
         addRule("tu", "つ");
+        addRule("tsu", "つ");
         addRule("te", "て");
         addRule("to", "と");
 
@@ -41,6 +44,7 @@ public class DefaultRomajiConverter implements RomajiConverter {
         addRule("ha", "は");
         addRule("hi", "ひ");
         addRule("hu", "ふ");
+        addRule("fu", "ふ");
         addRule("he", "へ");
         addRule("ho", "ほ");
 
@@ -57,6 +61,43 @@ public class DefaultRomajiConverter implements RomajiConverter {
         addRule("wa", "わ");
         addRule("wo", "を");
         addRule("nn", "ん");
+
+        addRule("ga", "が");
+        addRule("gi", "ぎ");
+        addRule("gu", "ぐ");
+        addRule("ge", "げ");
+        addRule("go", "ご");
+
+        addRule("za", "ざ");
+        addRule("zi", "じ");
+        addRule("ji", "じ");
+        addRule("zu", "ず");
+        addRule("ze", "ぜ");
+        addRule("zo", "ぞ");
+
+        addRule("da", "だ");
+        addRule("di", "ぢ");
+        addRule("du", "づ");
+        addRule("de", "で");
+        addRule("do", "ど");
+
+        addRule("ba", "ば");
+        addRule("bi", "び");
+        addRule("bu", "ぶ");
+        addRule("be", "べ");
+        addRule("bo", "ぼ");
+
+        addRule("ba", "ば");
+        addRule("bi", "び");
+        addRule("bu", "ぶ");
+        addRule("be", "べ");
+        addRule("bo", "ぼ");
+
+        addRule("pa", "ぱ");
+        addRule("pi", "ぴ");
+        addRule("pu", "ぷ");
+        addRule("pe", "ぺ");
+        addRule("po", "ぽ");
     }
 
     private void addRule(String spell, String hiragana) {
