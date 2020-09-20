@@ -416,7 +416,9 @@ public class DefaultRomajiConverter implements RomajiConverter {
                     hiragana.append(value);
                     i = j;
                 } else {
-                    if (i + 1 < romaji.length() && romaji.charAt(i) == romaji.charAt(i + 1)) {
+                    if (key.toString().getBytes().length == 1 // マルチバイト文字は対象外とする
+                            && i + 1 < romaji.length()
+                            && romaji.charAt(i) == romaji.charAt(i + 1)) {
                         // 促音
                         hiragana.append('っ');
                     } else if (romaji.charAt(i) == 'n') {

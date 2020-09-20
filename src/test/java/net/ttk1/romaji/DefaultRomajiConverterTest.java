@@ -41,4 +41,13 @@ public class DefaultRomajiConverterTest {
         String actual = converter.toHiragana(romaji);
         assertThat(actual, is(expected));
     }
+
+    @Test
+    public void testMultibyteCharacter() {
+        RomajiConverter converter = new DefaultRomajiConverter();
+        String romaji = "今日はいい天気ですね。";
+        String expected = "今日はいい天気ですね。";
+        String actual = converter.toHiragana(romaji);
+        assertThat(actual, is(expected));
+    }
 }
