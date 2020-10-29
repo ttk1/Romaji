@@ -292,6 +292,12 @@ public class DefaultRomajiConverter implements RomajiConverter {
         addRule("fe", "ふぇ");
         addRule("fo", "ふぉ");
 
+        addRule("fya", "ふゃ");
+        addRule("fyi", "ふぃ");
+        addRule("fyu", "ふゅ");
+        addRule("fye", "ふぇ");
+        addRule("fyo", "ふょ");
+
         addRule("bya", "びゃ");
         addRule("byi", "びぃ");
         addRule("byu", "びゅ");
