@@ -6,7 +6,7 @@
 
     <groupId>net.ttk1</groupId>
     <artifactId>Romaji</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
